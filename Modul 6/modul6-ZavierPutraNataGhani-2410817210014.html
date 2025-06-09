@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPhotography</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+    }
+
+    .custom-navbar {
+      background-color: #f8f9fa;
+      height: 125px;
+    }
+    .nav-link {
+      margin-right: 30px; 
+      letter-spacing: 1px; 
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      border: 1px solid #000;
+      background-color: transparent;
+      border-radius: 50px;
+      padding: 6px 15px;
+      min-width: 100px;
+      text-align: center;
+      color: #000
+    }
+    .hero {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #333;
+       line-height: 2;
+    }
+    .hero p:first-of-type {
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #333;
+      line-height: 0;
+    }
+    .hero small {
+      color: #777;
+      font-weight: 400;
+      letter-spacing: 5.5px;
+    }
+    .filter-btns button {
+      margin: 5px;
+      border: none;
+      background: none;
+      color: #000;
+      font-weight: normal;
+      transition: all 0.2s ease-in-out;
+    }
+    .filter-btns .active-filter {
+      border-radius: 50px;
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 400px;  
+      padding: 6px 20px;
+    }
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; 
+      font-weight: 700;  
+    }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .borders div {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      z-index: 9999;
+      pointer-events: none;
+      background-color: transparent;
+      border-color: #000;
+      border-style: solid;
+    }
+
+    .footer-line {
+      border: none;
+      border-top: 1px solid #ccc; 
+      margin: 75px 0 10px 0; 
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">JPhotography</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ABOUT ME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PORTFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi. Hello.. I Am JohnDas...!</h1>
+    <p><strong>I Travel Around The World To Get The Best Photos.!</strong></p>
+    <p><small>AWARD WINNING PHOTOGRAPHER / CINEMATOGRAPHER / WRITER</small></p>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="text-center filter-btns">
+    <button class="btn btn-sm" onclick="setActiveFilter(this)">All</button>
+    <button class="btn btn-sm" onclick="setActiveFilter(this)">Landscape</button>
+    <button class="btn btn-sm" onclick="setActiveFilter(this)">Portrait</button>
+    <button class="btn btn-sm" onclick="setActiveFilter(this)">Product</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="container gallery mt-4">
+    <div class="row">
+      <div class="col-6 col-md-3"><img src="cmbynaicybm.jpg" alt="cmbynaicybm"></div>
+      <div class="col-6 col-md-3"><img src="interstellar3.jpg" alt="Interstellar"></div>
+      <div class="col-6 col-md-3"><img src="beautifulboy.jpg" alt="Beautiful Boy"></div>
+      <div class="col-6 col-md-3"><img src="annewithane.jpg" alt="Anne With An E"></div>
+      <div class="col-6 col-md-3"><img src="janjijoni.jpg" alt="Janji Joni"></div>
+      <div class="col-6 col-md-3"><img src="deadpoetssociety.jpg" alt="Dead Poets Society"></div>
+      <div class="col-6 col-md-3"><img src="thestarling.jpg" alt="The Starling"></div>
+      <div class="col-6 col-md-3"><img src="lalaland.jpg" alt="La La Land"></div>
+      <div class="col-6 col-md-3"><img src="standbyme.jpg" alt="Stand By Me"></div>
+      <div class="col-6 col-md-3"><img src="tenet.jpg" alt="Tenet"></div>
+      <div class="col-6 col-md-3"><img src="thewitcher.jpg" alt="The Witcher"></div>
+      <div class="col-6 col-md-3"><img src="shutterisland.jpg" alt="Shutter Island"></div>
+      <div class="col-6 col-md-3"><img src="thedevilwearsprada.jpg" alt="The Devil Wears Prada"></div>
+      <div class="col-6 col-md-3"><img src="aadc.jpg" alt="Ada Apa Dengan Cinta"></div>
+      <div class="col-6 col-md-3"><img src="petualangansherina.jpg" alt="Petualangan Sherina"></div>
+      <div class="col-6 col-md-3"><img src="mammamia.jpg" alt="Mamma Mia"></div>     
+
+    </div>
+  </div>
+
+  <hr class="footer-line">
+
+  <!-- Footer -->
+  <footer>
+    <p><strong class="footer-brand">JPhotography</strong><br>© Copyright 2025. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fa-brands fa-threads"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+    <!-- Corner Borders -->
+  <div class="borders">
+  <div style="top: 0; left: 0; border-width: 18px 0 0 18px; position: absolute;"></div>
+  <div style="top: 0; right: 0; border-width: 18px 18px 0 0; position: absolute;"></div>
+  <div style="bottom: 0; left: 0; border-width: 0 0 18px 18px; position: absolute;"></div>
+  <div style="bottom: 0; right: 0; border-width: 0 18px 18px 0; position: absolute;"></div>
+</div>
+
+  <!-- Bootstraps, jQuery JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    function setActiveFilter(btn) {
+      document.querySelectorAll('.filter-btns button').forEach(el => {
+        el.classList.remove('active-filter');
+      });
+      btn.classList.add('active-filter');
+    }
+  </script>
+</body>
+
+</html>
